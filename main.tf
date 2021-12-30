@@ -5,8 +5,7 @@ terraform {
       version = "~> 3.33"
     }
   }
-
-  required_version = ">= 1.0.0"
+  required_version = ">= 1.1.0"
 
   cloud {
     organization = "hactiv8r"
@@ -15,7 +14,6 @@ terraform {
       name = "hello-world"
     }
   }
-
 }
 
 provider "aws" {
