@@ -74,3 +74,11 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
+        
+      - name: Render terraform docs inside the USAGE.md and push changes back to PR branch
+        uses: terraform-docs/gh-actions@v0.11.0
+        with:
+          working-dir: .
+          output-file: USAGE.md
+          output-method: inject
+          git-push: "true"
