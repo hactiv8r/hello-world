@@ -52,7 +52,7 @@ data "template_file" "user_data" {
 
 resource "aws_instance" "nginx_server" {
   ami           = "ami-0953ade692c96279b"
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
   key_name      = "server_key"
   tags = {
     Name = "Yusuf Nginx Server"
